@@ -10,13 +10,13 @@
 
 	SUI.showHidePassword = function() {
 
-		$( '.sui-2-3-22 .sui-form-field' ).each( function() {
+		$( '.sui-2-3-23 .sui-form-field' ).each( function() {
 
 			var $this = $( this );
 
 			if ( 0 !== $this.find( 'input[type="password"]' ).length ) {
 
-				$this.find( '[class*="sui-button"], .sui-password-toggle' ).on( 'click', function() {
+				$this.find( '[class*="sui-button"], .sui-password-toggle' ).off( 'click.toggle-password' ).on( 'click.toggle-password', function() {
 
 					var $button = $( this ),
 						$input  = $button.parent().find( 'input' ),
